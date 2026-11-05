@@ -1,0 +1,99 @@
+/* Panneau « Charte FVEE » - suit l'apparence Office (Segoe UI, gris neutres) */
+:root {
+  --bleu: #4583FF;
+  --bleu-sombre: #2655B3;
+  --texte: #242424;
+  --texte-2: #616161;
+  --bord: #e0e0e0;
+  --fond-2: #f5f5f5;
+  --erreur: #A82923;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  font: 13px/1.4 "Segoe UI", system-ui, sans-serif;
+  color: var(--texte);
+  background: #fff;
+  display: flex; flex-direction: column;
+}
+
+header {
+  position: sticky; top: 0; z-index: 2;
+  background: #fff; padding: 10px 10px 0; border-bottom: 1px solid var(--bord);
+}
+#recherche {
+  width: 100%; padding: 6px 8px; font: inherit;
+  border: 1px solid #c7c7c7; border-radius: 4px;
+}
+#recherche:focus { outline: 2px solid var(--bleu); outline-offset: -1px; border-color: transparent; }
+
+#onglets { display: flex; flex-wrap: wrap; gap: 2px 4px; margin-top: 8px; }
+#onglets button {
+  font: inherit; background: none; border: 0; padding: 6px 6px 7px; cursor: pointer;
+  color: var(--texte-2); border-bottom: 2px solid transparent;
+}
+#onglets button:hover { color: var(--texte); }
+#onglets button[aria-selected="true"] { color: var(--texte); font-weight: 600; border-bottom-color: var(--bleu); }
+
+main { flex: 1; overflow-y: auto; padding: 10px; }
+
+.barre { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: var(--texte-2); flex-wrap: wrap; }
+.segments { display: inline-flex; border: 1px solid #c7c7c7; border-radius: 4px; overflow: hidden; }
+.segments button { font: inherit; border: 0; background: #fff; padding: 3px 10px; cursor: pointer; color: var(--texte); }
+.segments button + button { border-left: 1px solid #c7c7c7; }
+.segments button[aria-pressed="true"] { background: var(--bleu-sombre); color: #fff; }
+
+.aide { color: var(--texte-2); font-size: 12px; margin: 0 0 10px; }
+h2 { font-size: 13px; font-weight: 600; margin: 14px 0 6px; }
+h2:first-child { margin-top: 0; }
+.vide { color: var(--texte-2); padding: 20px 0; text-align: center; }
+
+/* Grille d'éléments à insérer */
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 6px; }
+.tuile {
+  font: inherit; color: inherit; text-align: center; cursor: pointer;
+  background: #fff; border: 1px solid var(--bord); border-radius: 6px; padding: 6px 4px 5px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.tuile:hover { border-color: var(--bleu); background: #f7faff; }
+.tuile:focus-visible { outline: 2px solid var(--bleu); outline-offset: 1px; }
+.tuile:active { transform: scale(.97); }
+.vignette {
+  width: 100%; height: 62px; display: flex; align-items: center; justify-content: center;
+  border-radius: 4px; padding: 4px;
+}
+.vignette.blanc { background: var(--bleu-sombre); }   /* logos blancs : visibles sur fond bleu */
+.vignette img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.tuile .nom { font-size: 11px; line-height: 1.25; color: var(--texte-2);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.grille.logos { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+
+/* Couleurs */
+.famille { display: grid; grid-template-columns: 84px repeat(4, 1fr); gap: 4px; align-items: center; margin-bottom: 4px; }
+.famille .libelle { font-size: 12px; }
+.pastille {
+  height: 30px; border-radius: 4px; cursor: pointer; border: 1px solid rgba(0,0,0,.08);
+  font: 10px/1 "Segoe UI", sans-serif; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3px;
+}
+.pastille:hover { outline: 2px solid var(--texte); outline-offset: 1px; }
+.pastille:focus-visible { outline: 2px solid var(--bleu); outline-offset: 1px; }
+.entete-nuances { display: grid; grid-template-columns: 84px repeat(4, 1fr); gap: 4px; font-size: 11px; color: var(--texte-2); text-align: center; margin-bottom: 4px; }
+
+/* Polices */
+.police { border: 1px solid var(--bord); border-radius: 6px; padding: 8px 10px; margin-bottom: 8px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.police .apercu { font-size: 20px; line-height: 1.2; }
+.police .role { color: var(--texte-2); font-size: 12px; }
+.bouton {
+  font: inherit; cursor: pointer; border-radius: 4px; padding: 4px 10px; white-space: nowrap;
+  border: 1px solid #c7c7c7; background: #fff; color: var(--texte);
+}
+.bouton:hover { border-color: var(--bleu); }
+
+/* Message d'état en bas */
+#etat {
+  position: sticky; bottom: 0; padding: 0 10px; font-size: 12px; background: var(--fond-2);
+  border-top: 1px solid var(--bord); max-height: 0; overflow: hidden; transition: max-height .15s;
+}
+#etat.visible { max-height: 80px; padding: 7px 10px; }
+#etat.erreur { color: var(--erreur); background: #fdf3f3; }

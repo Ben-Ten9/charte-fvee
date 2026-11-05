@@ -1,0 +1,907 @@
+{
+    "version":  "1.0.0.0",
+    "genere":  "2026-11-05 18:46",
+    "categories":  [
+                       {
+                           "id":  "Logos",
+                           "nom":  "Logos",
+                           "elements":  [
+                                            {
+                                                "nom":  "1 ligne - blanc",
+                                                "fichier":  "assets/Logos/1-ligne-blanc.svg",
+                                                "type":  "svg",
+                                                "blanc":  true,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "1 ligne - couleur",
+                                                "fichier":  "assets/Logos/1-ligne-couleur.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "70 ans anniversaire - blanc",
+                                                "fichier":  "assets/Logos/70-ans-anniversaire-blanc.png",
+                                                "type":  "png",
+                                                "blanc":  true,
+                                                "largeurCm":  5
+                                            },
+                                            {
+                                                "nom":  "70 ans anniversaire - couleur",
+                                                "fichier":  "assets/Logos/70-ans-anniversaire-couleur.png",
+                                                "type":  "png",
+                                                "blanc":  false,
+                                                "largeurCm":  5
+                                            },
+                                            {
+                                                "nom":  "70 ans primaire - blanc",
+                                                "fichier":  "assets/Logos/70-ans-primaire-blanc.png",
+                                                "type":  "png",
+                                                "blanc":  true,
+                                                "largeurCm":  5
+                                            },
+                                            {
+                                                "nom":  "70 ans primaire - couleur",
+                                                "fichier":  "assets/Logos/70-ans-primaire-couleur.png",
+                                                "type":  "png",
+                                                "blanc":  false,
+                                                "largeurCm":  5
+                                            },
+                                            {
+                                                "nom":  "70 ans secondaire - blanc",
+                                                "fichier":  "assets/Logos/70-ans-secondaire-blanc.png",
+                                                "type":  "png",
+                                                "blanc":  true,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "70 ans secondaire - couleur",
+                                                "fichier":  "assets/Logos/70-ans-secondaire-couleur.png",
+                                                "type":  "png",
+                                                "blanc":  false,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "Horiz. texte à droite - blanc",
+                                                "fichier":  "assets/Logos/horiz-texte-a-droite-blanc.svg",
+                                                "type":  "svg",
+                                                "blanc":  true,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "Horiz. texte à droite - couleur",
+                                                "fichier":  "assets/Logos/horiz-texte-a-droite-couleur.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "Horiz. texte à gauche - blanc",
+                                                "fichier":  "assets/Logos/horiz-texte-a-gauche-blanc.svg",
+                                                "type":  "svg",
+                                                "blanc":  true,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "Horiz. texte à gauche - couleur",
+                                                "fichier":  "assets/Logos/horiz-texte-a-gauche-couleur.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  8
+                                            },
+                                            {
+                                                "nom":  "Vertical (classique) - blanc",
+                                                "fichier":  "assets/Logos/vertical-classique-blanc.svg",
+                                                "type":  "svg",
+                                                "blanc":  true,
+                                                "largeurCm":  5
+                                            },
+                                            {
+                                                "nom":  "Vertical (classique) - couleur",
+                                                "fichier":  "assets/Logos/vertical-classique-couleur.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  5
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "Pictos",
+                           "nom":  "Pictos",
+                           "elements":  [
+                                            {
+                                                "nom":  "Actualité",
+                                                "fichier":  "assets/Pictos/actualite.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Ados Equipe",
+                                                "fichier":  "assets/Pictos/ados-equipe.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Ados Foot",
+                                                "fichier":  "assets/Pictos/ados-foot.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Ados Skateboard",
+                                                "fichier":  "assets/Pictos/ados-skateboard.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Aide Humanitaire",
+                                                "fichier":  "assets/Pictos/aide-humanitaire.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Anniversaire",
+                                                "fichier":  "assets/Pictos/anniversaire.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Contact",
+                                                "fichier":  "assets/Pictos/contact.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Croissance",
+                                                "fichier":  "assets/Pictos/croissance.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Enfant",
+                                                "fichier":  "assets/Pictos/enfant.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Engagements",
+                                                "fichier":  "assets/Pictos/engagements.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Femme Enfants",
+                                                "fichier":  "assets/Pictos/femme-enfants.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Fondation",
+                                                "fichier":  "assets/Pictos/fondation.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Formations",
+                                                "fichier":  "assets/Pictos/formations.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "France",
+                                                "fichier":  "assets/Pictos/france.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Fraterie",
+                                                "fichier":  "assets/Pictos/fraterie.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "International",
+                                                "fichier":  "assets/Pictos/international.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Localisation",
+                                                "fichier":  "assets/Pictos/localisation.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Maison",
+                                                "fichier":  "assets/Pictos/maison.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Monde",
+                                                "fichier":  "assets/Pictos/monde.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Nos Valeurs",
+                                                "fichier":  "assets/Pictos/nos-valeurs.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Partenaires",
+                                                "fichier":  "assets/Pictos/partenaires.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Plaidoyer",
+                                                "fichier":  "assets/Pictos/plaidoyer.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Presse",
+                                                "fichier":  "assets/Pictos/presse.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Programe",
+                                                "fichier":  "assets/Pictos/programe.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Pros",
+                                                "fichier":  "assets/Pictos/pros.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Santé Mentale",
+                                                "fichier":  "assets/Pictos/sante-mentale.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Santé",
+                                                "fichier":  "assets/Pictos/sante.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Scolarité",
+                                                "fichier":  "assets/Pictos/scolarite.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Soutien 1",
+                                                "fichier":  "assets/Pictos/soutien-1.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Soutien 2",
+                                                "fichier":  "assets/Pictos/soutien-2.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Soutien Famille",
+                                                "fichier":  "assets/Pictos/soutien-famille.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Sport",
+                                                "fichier":  "assets/Pictos/sport.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Transparence",
+                                                "fichier":  "assets/Pictos/transparence.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Urgence",
+                                                "fichier":  "assets/Pictos/urgence.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Village",
+                                                "fichier":  "assets/Pictos/village.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "Signes",
+                           "nom":  "Signes",
+                           "elements":  [
+                                            {
+                                                "nom":  "2 Etoiles",
+                                                "fichier":  "assets/Signes/2-etoiles.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "ABC",
+                                                "fichier":  "assets/Signes/abc.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Arc en Ciel",
+                                                "fichier":  "assets/Signes/arc-en-ciel.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Astérisque",
+                                                "fichier":  "assets/Signes/asterisque.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Coeur",
+                                                "fichier":  "assets/Signes/coeur.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Eclair",
+                                                "fichier":  "assets/Signes/eclair.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Eclat 2",
+                                                "fichier":  "assets/Signes/eclat-2.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Eclat 3",
+                                                "fichier":  "assets/Signes/eclat-3.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Etoile",
+                                                "fichier":  "assets/Signes/etoile.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Flèche courbe",
+                                                "fichier":  "assets/Signes/fleche-courbe.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Flèche",
+                                                "fichier":  "assets/Signes/fleche.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Fleur",
+                                                "fichier":  "assets/Signes/fleur.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Lapin",
+                                                "fichier":  "assets/Signes/lapin.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Moins",
+                                                "fichier":  "assets/Signes/moins.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Non",
+                                                "fichier":  "assets/Signes/non.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Note",
+                                                "fichier":  "assets/Signes/note.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Nuage",
+                                                "fichier":  "assets/Signes/nuage.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Photo",
+                                                "fichier":  "assets/Signes/photo.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Plus",
+                                                "fichier":  "assets/Signes/plus.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Point",
+                                                "fichier":  "assets/Signes/point.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Smile",
+                                                "fichier":  "assets/Signes/smile.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Soleil Eclatant",
+                                                "fichier":  "assets/Signes/soleil-eclatant.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Soleil",
+                                                "fichier":  "assets/Signes/soleil.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Spirale",
+                                                "fichier":  "assets/Signes/spirale.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Tourbillon",
+                                                "fichier":  "assets/Signes/tourbillon.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Trait",
+                                                "fichier":  "assets/Signes/trait.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Validation",
+                                                "fichier":  "assets/Signes/validation.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            },
+                                            {
+                                                "nom":  "Zèbre",
+                                                "fichier":  "assets/Signes/zebre.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  3
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "Formes",
+                           "nom":  "Formes",
+                           "elements":  [
+                                            {
+                                                "nom":  "Angle",
+                                                "fichier":  "assets/Formes/angle.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Coeur",
+                                                "fichier":  "assets/Formes/coeur.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Diagonale",
+                                                "fichier":  "assets/Formes/diagonale.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Double",
+                                                "fichier":  "assets/Formes/double.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Enveloppe inverse",
+                                                "fichier":  "assets/Formes/enveloppe-inverse.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Enveloppe",
+                                                "fichier":  "assets/Formes/enveloppe.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Gradins",
+                                                "fichier":  "assets/Formes/gradins.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Maison",
+                                                "fichier":  "assets/Formes/maison.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Octogone",
+                                                "fichier":  "assets/Formes/octogone.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            },
+                                            {
+                                                "nom":  "Trapeze",
+                                                "fichier":  "assets/Formes/trapeze.svg",
+                                                "type":  "svg",
+                                                "blanc":  false,
+                                                "largeurCm":  4
+                                            }
+                                        ]
+                       }
+                   ],
+    "couleurs":  [
+                     {
+                         "nom":  "Bleu",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#2655B3"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#4583FF"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#A2C1FF"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#D0E0FF"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Cyan",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#2B99B3"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#39C8EA"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#9CE3F4"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#CDF1FA"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Vert clair",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#358C57"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#48BF77"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#A3DFBB"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#D1EFDD"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Vert",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#126636"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#34975E"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#99CBAE"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#CCE5D7"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Jaune",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#CCB800"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#FFE700"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#FFF380"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#FFF9BF"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Jaune orangé",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#BF8B00"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#FFB900"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#FFDC80"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#FFEDBF"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Orange",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#B35027"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#F76F36"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#FBB79A"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#FDDBCD"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Rouge",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#A82923"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#D1302E"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#E89796"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#F3CBCB"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Rose",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#BF5F98"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#F67AC3"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#FABCE1"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#FDDEF0"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Mauve",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#A876BF"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#E09EFF"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#EFCEFF"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#F7E7FF"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Violet clair",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#684BB3"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#8B64EF"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#C5B1F7"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#E2D8FB"
+                                         }
+                                     ]
+                     },
+                     {
+                         "nom":  "Violet",
+                         "nuances":  [
+                                         {
+                                             "nom":  "Sombre",
+                                             "hex":  "#3A0E80"
+                                         },
+                                         {
+                                             "nom":  "Base",
+                                             "hex":  "#5214B5"
+                                         },
+                                         {
+                                             "nom":  "50 %",
+                                             "hex":  "#A889DA"
+                                         },
+                                         {
+                                             "nom":  "25 %",
+                                             "hex":  "#D4C4EC"
+                                         }
+                                     ]
+                     }
+                 ],
+    "polices":  [
+                    {
+                        "role":  "Titres",
+                        "nom":  "Bimbo Pro"
+                    },
+                    {
+                        "role":  "Texte courant",
+                        "nom":  "Arial"
+                    },
+                    {
+                        "role":  "Manuscrite (accroches)",
+                        "nom":  "Caveat Brush"
+                    }
+                ]
+}
