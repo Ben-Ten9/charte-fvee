@@ -313,7 +313,8 @@ async function surRemplissage(hex) {
       throw new Error(`Cette version de Word ne permet pas au complément de colorer une forme : `
         + `Format de la forme > Remplissage > Autres couleurs > Hex ${hex.slice(1)}.`);
     }
-    throw new Error('Dans Word, le remplissage s\'applique à une forme ou à une cellule de tableau : sélectionnes-en une.');
+    throw new Error('Aucune forme trouvée dans la sélection ni dans son paragraphe, et pas de cellule de tableau. '
+      + 'Clique sur le bord de la forme pour la sélectionner, puis réessaie.');
   });
 }
 
