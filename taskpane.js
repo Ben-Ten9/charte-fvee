@@ -275,18 +275,30 @@ async function surRemplissage(hex) {
   }
   return Word.run(async (ctx) => {
     const sel = ctx.document.getSelection();
+    const apiFormes = Office.context.requirements.isSetSupported('WordApiDesktop', '1.2');
+    let indice = '';
     // Forme sélectionnée (API récente de Word)
-    if (Office.context.requirements.isSetSupported('WordApiDesktop', '1.2')) {
+    if (apiFormes) {
       try {
-        const formes = sel.shapes;
-        formes.load('items');
-        await ctx.sync();
-        if (formes.items.length) {
-          for (const f of formes.items) f.fill.setSolidColor(hex);
-          await ctx.sync();
-          return `${formes.items.length} forme(s)`;
+        let formes = await formesWord(ctx, sel);
+        // Forme flottante : la sélection se réduit souvent à un point, sans l'ancre de la forme.
+        // On regarde alors le paragraphe, seulement s'il porte une seule forme (pour ne pas en colorer d'autres).
+        if (!formes.racine.length) {
+          const para = await formesWord(ctx, sel.paragraphs.getFirst().getRange('Whole'));
+          if (para.racine.length === 1) formes = para;
+          else if (para.racine.length > 1) indice = 'Plusieurs formes sont ancrées dans ce paragraphe : sélectionne la forme elle-même.';
         }
-      } catch (_) { /* pas de forme : on tente la cellule */ }
+        if (formes.feuilles.length) {
+          for (const f of formes.feuilles) f.fill.setSolidColor(hex);
+          await ctx.sync();
+          return `${formes.feuilles.length} forme(s)`;
+        }
+        if (formes.racine.some((f) => f.type === 'Picture')) {
+          indice = 'C\'est une image, pas une forme : clic droit > Convertir en forme, puis réessaie.';
+        }
+      } catch (err) {
+        indice = `Forme non modifiable par le complément (${message(err)}).`;
+      }
     }
     const cellule = sel.parentTableCellOrNullObject;
     cellule.load('isNullObject');
@@ -296,8 +308,41 @@ async function surRemplissage(hex) {
       await ctx.sync();
       return 'cellule de tableau';
     }
+    if (indice) throw new Error(indice);
+    if (!apiFormes) {
+      throw new Error(`Cette version de Word ne permet pas au complément de colorer une forme : `
+        + `Format de la forme > Remplissage > Autres couleurs > Hex ${hex.slice(1)}.`);
+    }
     throw new Error('Dans Word, le remplissage s\'applique à une forme ou à une cellule de tableau : sélectionnes-en une.');
   });
+}
+
+// Formes d'une plage Word : « racine » = formes ancrées, « feuilles » = formes colorables
+// (les groupes et zones de dessin, typiques d'un SVG converti en forme, sont dépliés)
+async function formesWord(ctx, plage) {
+  const racine = plage.shapes;
+  racine.load('items/type');
+  await ctx.sync();
+  return { racine: racine.items, feuilles: await deplierFormes(ctx, racine.items) };
+}
+
+async function deplierFormes(ctx, formes) {
+  const feuilles = [];
+  const conteneurs = [];
+  for (const f of formes) {
+    if (f.type === 'Group' || f.type === 'Canvas') {
+      const s = (f.type === 'Group' ? f.group : f.canvas).shapes;
+      s.load('items/type');
+      conteneurs.push(s);
+    } else if (f.type === 'GeometricShape' || f.type === 'TextBox') {
+      feuilles.push(f);
+    }
+  }
+  if (conteneurs.length) {
+    await ctx.sync();
+    for (const c of conteneurs) feuilles.push(...await deplierFormes(ctx, c.items));
+  }
+  return feuilles;
 }
 
 // ---------------------------------------------------------------- polices
