@@ -300,6 +300,9 @@ async function surRemplissage(hex) {
         indice = `Forme non modifiable par le complément (${message(err)}).`;
       }
     }
+    // Formes libres (SVG converti en forme) : absentes de l'API, on modifie le XML du passage
+    const viaOoxml = await remplissageOoxml(ctx, sel, hex);
+    if (viaOoxml) return viaOoxml;
     const cellule = sel.parentTableCellOrNullObject;
     cellule.load('isNullObject');
     await ctx.sync();
@@ -316,6 +319,64 @@ async function surRemplissage(hex) {
     throw new Error('Aucune forme trouvée dans la sélection ni dans son paragraphe, et pas de cellule de tableau. '
       + 'Clique sur le bord de la forme pour la sélectionner, puis réessaie.');
   });
+}
+
+// Remplissage par OOXML : sélection d'abord, puis paragraphe d'ancrage (s'il ne porte qu'un dessin avec formes)
+async function remplissageOoxml(ctx, sel, hex) {
+  const plages = [sel, sel.paragraphs.getFirst().getRange('Content')];
+  for (let i = 0; i < plages.length; i++) {
+    const ox = plages[i].getOoxml();
+    await ctx.sync();
+    const r = recolorerOoxml(ox.value, hex);
+    if (!r || !r.formes) continue;
+    if (i === 1 && r.dessins > 1) {
+      throw new Error('Plusieurs formes sont ancrées dans ce paragraphe : le complément ne sait pas laquelle est sélectionnée. '
+        + `Format de la forme > Remplissage > Autres couleurs > Hex ${hex.slice(1)}.`);
+    }
+    plages[i].insertOoxml(r.xml, 'Replace');
+    await ctx.sync();
+    return `${r.formes} forme(s)`;
+  }
+  return null;
+}
+
+const NS = {
+  wps: 'http://schemas.microsoft.com/office/word/2010/wordprocessingShape',
+  wp: 'http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing',
+  a: 'http://schemas.openxmlformats.org/drawingml/2006/main',
+  v: 'urn:schemas-microsoft-com:vml',
+};
+const REMPLISSAGES = ['noFill', 'solidFill', 'gradFill', 'blipFill', 'pattFill', 'grpFill'];
+const enfantsA = (n, noms) => [...n.children].filter((c) => c.namespaceURI === NS.a && noms.includes(c.localName));
+
+// Remplace le remplissage des formes (wps:wsp) d'un paquet OOXML. Ne touche pas aux contours.
+// Si certaines formes sont remplies, seules celles-là changent (une forme « sans remplissage » le reste).
+function recolorerOoxml(xml, hex) {
+  const doc = new DOMParser().parseFromString(xml, 'application/xml');
+  if (doc.getElementsByTagName('parsererror').length) return null;
+  const spPrs = [...doc.getElementsByTagNameNS(NS.wps, 'wsp')]
+    .map((f) => [...f.children].find((c) => c.namespaceURI === NS.wps && c.localName === 'spPr'))
+    .filter(Boolean);
+  if (!spPrs.length) return { formes: 0 };
+  const remplies = spPrs.filter((sp) => enfantsA(sp, REMPLISSAGES.filter((n) => n !== 'noFill')).length);
+  const cibles = remplies.length ? remplies : spPrs;
+  for (const sp of cibles) {
+    for (const c of enfantsA(sp, REMPLISSAGES)) sp.removeChild(c);
+    const fill = doc.createElementNS(NS.a, 'a:solidFill');
+    const clr = doc.createElementNS(NS.a, 'a:srgbClr');
+    clr.setAttribute('val', hex.slice(1).toUpperCase());
+    fill.appendChild(clr);
+    // Ordre imposé par le schéma : xfrm, géométrie, remplissage, contour...
+    const avant = enfantsA(sp, ['custGeom', 'prstGeom'])[0] || enfantsA(sp, ['xfrm'])[0];
+    sp.insertBefore(fill, avant ? avant.nextSibling : sp.firstChild);
+  }
+  // Version VML de secours (anciens Word), si présente
+  for (const s of doc.getElementsByTagNameNS(NS.v, 'shape')) {
+    if (s.getAttribute('filled') !== 'f' && s.getAttribute('filled') !== 'false') s.setAttribute('fillcolor', hex);
+  }
+  const dessins = [...doc.getElementsByTagNameNS(NS.wp, 'anchor'), ...doc.getElementsByTagNameNS(NS.wp, 'inline')]
+    .filter((d) => d.getElementsByTagNameNS(NS.wps, 'wsp').length).length;
+  return { xml: new XMLSerializer().serializeToString(doc), formes: cibles.length, dessins };
 }
 
 // Formes d'une plage Word : « racine » = formes ancrées, « feuilles » = formes colorables
